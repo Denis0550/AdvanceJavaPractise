@@ -13,7 +13,7 @@ public class Exercise3 {
         int[] array1 = new int[1000];
         int[] array2 = new int[1000];
         for (int i = 0; i < 1000; i++) {
-            array1[i] = random.nextInt(200);
+            array1[i] = random.nextInt(1000);
             array2[i] = array1[i];
         }
 
@@ -62,6 +62,7 @@ class BubbleSortStrategy implements Callable<String> {
     @Override
     public String call() throws Exception {
         bubbleSort();
+        System.out.println(Arrays.toString(array));
         return "Bubble sort";
     }
 }
@@ -89,6 +90,7 @@ class InsertionSortStrategy implements Callable<String> {
     @Override
     public String call() throws Exception {
         insertionSort();
+        System.out.println(Arrays.toString(array));
         return "Insertion sort";
     }
 }
